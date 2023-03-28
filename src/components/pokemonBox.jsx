@@ -14,6 +14,7 @@ const PokemonBox = () => {
 
             <PokemonCanvas />
 
+
         </div >
     )
 
