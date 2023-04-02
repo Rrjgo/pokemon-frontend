@@ -11,10 +11,7 @@ const PokemonBox = () => {
             height: "360px",
             backgroundColor: "pink",
         }}>
-
             <PokemonCanvas />
-
-
         </div >
     )
 
