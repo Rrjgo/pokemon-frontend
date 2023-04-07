@@ -11,8 +11,6 @@ export default function useGet(url, initialState) {
             setLoading(true);
             setError(null);
 
-
-
             try {
                 const response = await axios.get(url);
                 setData(response.data);

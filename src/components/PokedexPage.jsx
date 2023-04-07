@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import styles from './PokedexPage.module.css';
-import useGet from '../utils/usrGet';
+import useGet from '../utils/useGet';
 
 /**
  * Renders information about a pokemon with the given id.

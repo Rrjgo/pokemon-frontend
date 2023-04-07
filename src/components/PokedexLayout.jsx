@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from 'react-router-dom';
 import styles from './PokedexLayout.module.css';
-import useGet from '../utils/usrGet';
+import useGet from '../utils/useGet';
 
 /**
  * Renders the layout of the page, including a list of pokemon on the left, and a main window on the right.
