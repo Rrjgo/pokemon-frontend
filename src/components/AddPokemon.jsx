@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import styles from './AddPokemon.module.css';
 import usePost from '../utils/usePost';
 import useGet from '../utils/useGet';
 
@@ -33,7 +34,7 @@ export default function AddPokemon() {
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className={styles.formContainer}>
                 <label>
                     Name:
                     <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />

@@ -1,8 +1,7 @@
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom"
 import PokemonBox from "./components/pokemonBox"
-import PokedexLayout from "./components/PokedexLayout";
 import PokedexPage from "./components/PokedexPage";
-import AddPokemon from "./components/AddPokemon";
+import PokemonPage from "./components/PokemonPage";
 
 const App = () => {
 
@@ -11,7 +10,7 @@ const App = () => {
 
       <PokemonBox />
       <Routes>
-        <Route path="/" element={<PokedexLayout />}>
+        <Route path="/" element={<PokemonPage />}>
 
           <Route index element={<Navigate to="1" replace />} />
 
@@ -19,7 +18,6 @@ const App = () => {
 
         </Route>
       </Routes>
-      <AddPokemon />
     </BrowserRouter>
 
   )
