@@ -23,10 +23,6 @@ export default function AddPokemon() {
 
     const [postState, postData] = usePost(`${API_BASE_URL}/api/pokemon/add`, initialState);
 
-
-
-
-
     const handleSubmit = (e) => {
         e.preventDefault();
         postData({ id, name, imageUrl, dexEntry });
@@ -35,22 +31,25 @@ export default function AddPokemon() {
     return (
         <>
             <form onSubmit={handleSubmit} className={styles.formContainer}>
-                <label>
-                    Name:
-                    <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
+                <label className={styles.labelContainer}>
+                    &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;Name:
+                    <input type="text" value={name} onChange={(e) => setName(e.target.value)} required className={styles.inputField} />
                 </label>
                 <br />
-                <label>
+                <label className={styles.labelContainer}>
                     Image URL:
-                    <input type="text" value={imageUrl} onChange={(e) => setImageUrl(e.target.value)} required />
-                </label>
+                    <input type="text" value={imageUrl} onChange={(e) => setImageUrl(e.target.value)} required className={styles.inputField} />
+                </label >
+
                 <br />
-                <label>
-                    Dex Entry:
-                    <textarea value={dexEntry} onChange={(e) => setDexEntry(e.target.value)} required />
+                <label className={styles.labelContainer}>
+                    &nbsp;&nbsp;Dex Entry:
+                    <input value={dexEntry} onChange={(e) => setDexEntry(e.target.value)} required className={styles.inputField} />
                 </label>
+
                 <br />
-                <button type="submit">Add Pokemon</button>
+
+                <button type="submit" className={styles.button}>Add Pokemon</button>
             </form>
             {postState.loading && <p>Loading...</p>}
             {postState.error && <p>Error: {postState.error.message}</p>}

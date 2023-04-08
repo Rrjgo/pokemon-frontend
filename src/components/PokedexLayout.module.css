@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 16px;
 }
 
 .dexContainer {
@@ -24,7 +25,7 @@
     overflow: hidden;
 }
 
-.list > div {
+.list>div {
     height: 100%;
     overflow: auto;
     display: flex;
@@ -52,7 +53,8 @@
     width: 30px;
 }
 
-.listItem:hover, .listItem.activeListItem {
+.listItem:hover,
+.listItem.activeListItem {
     border: 2px solid red;
 }
 

@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import styles from './SearchPokemon.module.css';
 import useGet from '../utils/useGet';
 import { PokedexSearchLayout } from "./PokedexLayout";
 
@@ -20,16 +21,16 @@ export default function SearchPokemon() {
 
 
     return (
-        <div>
+        <div className={styles.container}>
             <input
                 type="text"
-                placeholder="Search Pokémon by name"
+                placeholder="Search Pokemon by name"
                 value={searchTerm}
                 onChange={handleInputChange}
+                className={styles.inputField}
             />
-            <button onClick={handleButtonClick}>Search</button>
+            <button onClick={handleButtonClick} className={styles.button}>Search</button>
             {loading && <p>Loading...</p>}
-
             {pokemonList && <PokedexSearchLayout pokemonList={pokemonList} />}
         </div>
     );
