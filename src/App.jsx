@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom"
-import PokemonBox from "./components/pokemonBox"
+import PokemonBox from "./components/PokemonCenter/pokemonBox"
 import PokedexPage from "./components/PokedexPage";
 import PokemonPage from "./components/PokemonPage";
 

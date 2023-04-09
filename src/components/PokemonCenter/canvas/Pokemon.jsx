@@ -64,7 +64,6 @@ const PokemonCanvas = () => {
 
         const onMouseLeave = () => {
             mouse.isInsideContainer = false;
-            console.log("out")
         };
 
         container.addEventListener('mousemove', onMouseMove);
@@ -79,14 +78,16 @@ const PokemonCanvas = () => {
     }, []);
 
     return (
-        <div ref={containerRef} style={{ position: 'relative', width: '100%', height: '100%' }}>
+        <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+
+
             <Canvas
                 camera={{ position: [0, 10, 12], fov: 20 }}
                 gl={{ preserveDrawingBuffer: true }}
             >
                 <Pokemon />
             </Canvas >
-            <NavBar />
+            <NavBar ref={containerRef} />
         </div>
 
     );
