@@ -34,7 +34,6 @@ const Pokemon = () => {
             <pointLight intensity={20} />
             <primitive
                 object={pokemon.scene}
-
             />
         </mesh>
     );
